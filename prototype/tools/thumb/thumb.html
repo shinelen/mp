@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thumbnail</title>
+<style type="text/css">
+	.gap-tmb{
+		position:absolute;
+		top:0px;
+		left:0px;
+		border: 5px solid #dedede;
+		background-color:#FFFFFF;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+   		-webkit-border-radius: 10px;
+		min-width: 10px;
+		min-height: 10px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.gap-tmb.s1{
+		top:10px;
+		left:10px;
+	}
+	.gap-tmb.s2{
+		top:20px;
+		left:20px;
+	}
+	.gap-tmb img{
+		vertical-align: middle;
+	}
+	.gap-thumb{
+		width:150px;
+		height:200px;
+		position: relative;
+		min-width: 40px;
+		min-height: 40px;
+		margin:auto;
+	}
+	.gap-thumb-perview{
+		position: absolute;
+		min-width: 200px;
+		min-height: 200px;
+		line-height:100px;
+		text-align: center;
+		vertical-align: middle;
+		border:8px solid #2381C3;
+		background-color:#FFFFFF;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+   		-webkit-border-radius: 10px;
+   		padding:5px;
+   		display: none;
+	}
+	.gap-thumb-perview img{
+		vertical-align: middle;
+	}
+	.gap-preview-container{
+		position: relative;
+		width:636px;
+		height:500px;
+		text-align: center;
+	}
+	.gap-preview{
+		float: left;
+		margin:5px;
+		width:300px;
+		height:300px;
+		line-height:300px;
+		text-align:center;
+		vertical-align:middle;
+	}
+	.gap-preview.prev{
+		margin-top:75px;
+		width:150px;
+		height:150px;
+		line-height:150px;
+		filter:alpha(opacity=30);
+		-moz-opacity:0.3;
+		-khtml-opacity: 0.3;
+		opacity: 0.3;
+	}
+	.gap-preview.next{
+		margin-top:75px;
+		width:150px;
+		height:150px;
+		line-height:150px;
+		filter:alpha(opacity=30);
+		-moz-opacity:0.3;
+		-khtml-opacity: 0.3;
+		opacity: 0.3;
+	}
+	.gap-preview.next:hover,.gap-preview.prev:hover{
+		filter:alpha(opacity=70);
+		-moz-opacity:0.7;
+		-khtml-opacity: 0.7;
+		opacity: 0.7;
+	}
+	.gap-preview-page-nav{
+		position: relative;
+		text-align: center;
+		vertical-align: middle;
+		width: 300px;
+		height: 50px;
+		line-height: 50px;
+		margin: auto;
+		background-image: -moz-linear-gradient(top, #E8E8E8, #CBCBCB); /* Firefox */
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E8E8E8), color-stop(1, #CBCBCB)); /* Saf4+, Chrome */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8E8E8', endColorstr='#CBCBCB', GradientType='0'); /* IE*/
+	}
+	.gap-preview-btn{
+		position: absolute;
+		cursor: pointer;
+	}
+	.gap-preview-btn:hover{
+		filter:alpha(opacity=50);
+		-moz-opacity:0.5;
+		-khtml-opacity: 0.5;
+		opacity: 0.5;
+	}
+	.gap-preview-btn.prev{
+		position: absolute;
+		top:0px;
+		left:0px;
+		max-height: 50px;
+	}
+	.gap-preview-btn.next{
+		top:0px;
+		right:0px;
+		max-height: 50px;
+	}
+	.gap-preview-btn.close{
+		top:0px;
+		right:0px;
+		max-height: 30px;
+	}
+	.gap-preview-page-text{
+		width:200px;
+		height:50px;
+		margin: auto;
+		color: #919191;
+		font-size: 40px;
+		cursor: default;
+	}
+	.clear{
+		clear:both;
+	}
+</style>
+<script type="text/javascript" src="../../js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="../../js/util.js"></script>
+</head>
+<body>
+<table width="28%" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td width="40%" height="25" class="title_nowidth"></td>
+		<td width="60%">
+		
+			<div class="gap-thumb">
+				    <div style="width:120px;height:150px;" class="gap-tmb">
+				 		 <img src="/db_picture/artworkThumb/Range_26998_001/Item2_20150408171212312_4870/ED61FC5E-8AA9-739F-3FBE-A023EA550451/ED61FC5E-8AA9-739F-3FBE-A023EA550451_thumb.jpg?date=1428484341121" onload="zoomThumb(this)" height="150" width="120">
+				    </div>
+			  </div>
+			  
+		</td>
+	</tr>
+	<tr>
+		<td height="25" class="title_nowidth">
+		
+		  <div class="gap-thumb">
+		  	<div style="width:120px;height:150px;" class="gap-tmb">
+		    </div>
+		    <div style="width:120px;height:150px;" class="gap-tmb s1">
+		    </div>
+		    <div style="width:120px;height:150px;" class="gap-tmb s2">
+		 		 <img src="/db_picture/artworkThumb/Range_26998_001/Item2_20150408171212312_4870/ED61FC5E-8AA9-739F-3FBE-A023EA550451/ED61FC5E-8AA9-739F-3FBE-A023EA550451_thumb.jpg?date=1428484341121" onload="zoomThumb(this)" height="150" width="120">
+		    </div>
+		  </div>
+		  
+		</td>
+		<td id="testDemoThumb1">
+		  <!-- <img id="thumb1" gap-src="http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg" gap-width="280" gap-height="150" gap-page="1"> -->
+		</td>
+	</tr>
+</table>
+<div id="testDemo">
+	
+</div>
+<div id="testDemo2">
+	<div class="gap-preview-container">
+		<img src="../../images/tools/preview_close.png" class="gap-preview-btn close">
+		<div class="gap-preview prev"></div>
+		<div class="gap-preview"></div>
+		<div class="gap-preview next"></div>
+		<div class="clear"></div>
+		<div class="gap-preview-page-nav">
+			<img src="../../images/tools/preview_prev.png" class="gap-preview-btn prev">
+			<div class="gap-preview-page-text">06/15</div>
+			<img src="../../images/tools/preview_next.png" class="gap-preview-btn next">
+		</div>
+	</div>
+</div>
+<div id="testDemo3"></div>
+<div class="clear"></div>
+<div id="testDemo4"></div>
+<script type="text/javascript" src="../../js/tools/thumb/thumb.js"></script>
+
+<script type="text/javascript">
+	var thumb = new GAPThumb({
+		page:2,
+		src:"http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg",
+		//errorSrc:"http://css88.b0.upaiyun.com/css88/2014/09/miaov021.jpg",
+		width:280,
+		height:150,
+		previewWidth:300,
+		previewHeight:300,
+		previewSrc:"https://www.smart-fixx.com/SmartFIXX/db_picture/dalThumb/347/1/20141126210106356_large.jpg"
+	});
+	thumb.element
+	.bind("img-load-fail",function(e){
+	})
+	.bind("img-over",function(e,test){
+	})
+	.bind("img-out",function(e,jq_preview){
+		
+	})
+	.bind("preview-next",function(e,page,prevImg,img,nextImg){
+ 		prevImg.attr("src","http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg");
+ 		img.attr("src","http://www.17sucai.com/upload/55/2015-04-10/c738cd3b88f4b6ed5a3d2fb51f7e5797_thumb.jpg");
+ 		nextImg.attr("src","http://www.17sucai.com/upload/55/2015-04-10/c738cd3b88f4b6ed5a3d2fb51f7e5797_thumb.jpg");
+ 	})
+ 	.bind("preview-prev",function(e,page,prevImg,img,nextImg){
+ 		prevImg.attr("src","http://www.17sucai.com/upload/55/2015-04-10/c738cd3b88f4b6ed5a3d2fb51f7e5797_thumb.jpg");
+ 		img.attr("src","http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg");
+ 		nextImg.attr("src","http://www.17sucai.com/upload/55/2015-04-10/c738cd3b88f4b6ed5a3d2fb51f7e5797_thumb.jpg");
+ 	})
+ 	.bind("preview-close",function(e,preview){
+		preview.hide();
+	});
+	jQuery("#testDemo").append(thumb.element);
+	
+	var img = GAPUtil.img(null,{
+		"id":"thumb1",
+		"gap-src":"http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg",
+		"gap-width":"280",
+		"gap-height":"150",
+		"gap-page":"1"
+	})
+	img.bind("img-over",function(e){
+		GAPUtil.log("over");
+	})
+	.bind("img-out",function(e){
+		GAPUtil.log("out");
+	}); 
+	jQuery("#testDemoThumb1").html(img);
+	
+	/* jQuery("#thumb1")
+	.bind("img-over",function(e){
+		GAPUtil.log("over");
+	})
+	.bind("img-out",function(e){
+		GAPUtil.log("out");
+	}); */
+	//GAPThumbInit();
+	
+ 	var preview = new GAPPreview({
+		page:1,
+		src:"http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg",
+		width:310,
+		height:310
+	}); 
+ 	jQuery("#testDemo3").append(preview.element);
+ 	
+ 	var preview2 = new GAPPreview({
+		page:2,
+		src:"http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg",
+		width:310,
+		height:310,
+		type:GAP_PREVIEW_NORMAL_TYPE
+	}); 
+ 	preview2.element.bind("preview-next",function(e,page,prevImg,img,nextImg){
+ 		prevImg.attr("src","http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg");
+ 		img.attr("src","http://www.17sucai.com/upload/55/2015-04-10/c738cd3b88f4b6ed5a3d2fb51f7e5797_thumb.jpg");
+ 		nextImg.attr("src","http://www.17sucai.com/upload/55/2015-04-10/c738cd3b88f4b6ed5a3d2fb51f7e5797_thumb.jpg");
+ 	})
+ 	jQuery("#testDemo4").append(preview2.element);
+ 	
+ 	
+</script>
+</body>
+</html>

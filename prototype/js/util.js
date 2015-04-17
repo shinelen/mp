@@ -1,8 +1,17 @@
+/**
+ * @GAPUtil UI 常用工具类
+ * @author shinelen
+ * @date 2015-05-10
+ * 
+ * @param window
+ * @param jq -- jQuery
+ */
 ;(function(window,jq){
 	var _console,
 	u = {},
 	_debug = true,
 	_debugError = false;
+	u.isIpad = false;
     u.BROWSERS = {
         UNKNOWN:    0,
         IE:         1,
@@ -22,7 +31,9 @@
             ver = navigator.appVersion,
             ua  = navigator.userAgent,
             regex;
-
+        if (navigator.userAgent.indexOf('iPad') != -1||navigator.userAgent.indexOf('iPhone') != -1) {
+			u.isIpad = true;
+		}
 
         switch( navigator.appName ){
             case "Microsoft Internet Explorer":
@@ -123,6 +134,49 @@
 		ele = attrs ? ele.attr(attrs) : ele;
 		ele = csses ? ele.css(csses) : ele;
 	}
+	u.chkBoolean = function(flag){
+		if(typeof flag == "string"){
+			flag = flag=="true"?true:false;
+		}else if(typeof flag =="number"){
+			flag = flag == 1?true:false;
+		}
+		return flag;
+	}
+	u.filterPath = function(match,path,page){
+		if(path&&path.indexOf(match)!=-1){
+			var regMatch = "",
+			symbolRestrict = "!@#$%^&*()~`,.<>;:'?/";
+			
+			for(var i=0;i<match.length;i++){
+				var char = match.charAt(i);
+				if(symbolRestrict.indexOf(char)!=-1){
+					regMatch +="\\"+char;
+				}else{
+						regMatch += char;
+				}
+			}
+			var reg = new RegExp(regMatch,"gi");
+			
+			page = (page<=0)?1:page;
+			path = path.replace(reg,page);
+		}
+		return path;
+	}
+	u.filterTestId = function(data){
+		if(data&&typeof data == "string"){
+			var re = new RegExp("'", "gi");
+			data = data.replace(re,"");
+			re = new RegExp('"', "gi");
+			data = data.replace(re,"");
+			re = new RegExp("<", "gi");
+			data = data.replace(re,"");
+			re = new RegExp(">", "gi");
+			data = data.replace(re,"");
+			re = new RegExp(" ", "gi");
+			data = data.replace(re,"-");
+		}
+		return data;
+	}
 	u.getScrollTop = function(){
 		var top = document.documentElement.scrollTop;
 		if(top==0){
@@ -165,6 +219,9 @@
 	}
 	u.isExisted = function(arg){
 		if(typeof arg=="string"){
+			if(u.Browser.vendor == u.BROWSERS.FIREFOX){
+				return true;
+			}
 			var ele = jQuery("*[SERIAL_NUMBER="+arg+"]");
 			if(ele&&ele.length>0){
 				return true;

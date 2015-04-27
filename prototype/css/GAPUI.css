@@ -1,3 +1,11 @@
+/**
+	This CSS file include below style: 
+	UI布局
+	UI Button Style
+*/
+/**
+	***************************************************************** UI布局 
+*/
 .span1,
 .span2,
 .span3,
@@ -139,4 +147,461 @@
 .span-width {
   margin-left: 0;
   float: none;
+}
+
+/**
+	**********************************************************************************UI Button Style
+*/
+.button {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 12px;
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 7px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #FFFFFF;
+  background-color: #5090CD;
+  border-color: #cccccc;
+}
+.button:hover,
+.button:focus,
+.button:active,
+.button.active,
+.open .dropdown-toggle.button {
+  color: #FFFFFF;
+  background-color: #79C0E3;
+  border-color: #adadad;
+}
+.button:active,
+.button.active,
+.open .dropdown-toggle.button {
+  background-image: none;
+}
+.button.disabled,
+.button[disabled],
+fieldset[disabled] .button,
+.button.disabled:hover,
+.button[disabled]:hover,
+fieldset[disabled] .button:hover,
+.button.disabled:focus,
+.button[disabled]:focus,
+fieldset[disabled] .button:focus,
+.button.disabled:active,
+.button[disabled]:active,
+fieldset[disabled] .button:active,
+.button.disabled.active,
+.button[disabled].active,
+fieldset[disabled] .button.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.button .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+.button:focus,
+.button:active:focus,
+.button.active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.button:hover,
+.button:focus {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.button:active,
+.button.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.button.disabled,
+.button[disabled],
+fieldset[disabled] .button {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.button-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.button-default:hover,
+.button-default:focus,
+.button-default:active,
+.button-default.active,
+.open .dropdown-toggle.button-default {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.button-default:active,
+.button-default.active,
+.open .dropdown-toggle.button-default {
+  background-image: none;
+}
+.button-default.disabled,
+.button-default[disabled],
+fieldset[disabled] .button-default,
+.button-default.disabled:hover,
+.button-default[disabled]:hover,
+fieldset[disabled] .button-default:hover,
+.button-default.disabled:focus,
+.button-default[disabled]:focus,
+fieldset[disabled] .button-default:focus,
+.button-default.disabled:active,
+.button-default[disabled]:active,
+fieldset[disabled] .button-default:active,
+.button-default.disabled.active,
+.button-default[disabled].active,
+fieldset[disabled] .button-default.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.button-default .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.button-link {
+  color: #319dfc;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.button-link,
+.button-link:active,
+.button-link[disabled],
+fieldset[disabled] .button-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.button-link,
+.button-link:hover,
+.button-link:focus,
+.button-link:active {
+  border-color: transparent;
+}
+.button-link:hover,
+.button-link:focus {
+  color: #0377dd;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.button-link[disabled]:hover,
+fieldset[disabled] .button-link:hover,
+.button-link[disabled]:focus,
+fieldset[disabled] .button-link:focus {
+  color: #999999;
+  text-decoration: none;
+}
+.button-large {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.button-small {
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.button-mini {
+  padding: 1px 5px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.button-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.button-block + .button-block {
+  margin-top: 5px;
+}
+input[type="submit"].button-block,
+input[type="reset"].button-block,
+input[type="button"].button-block {
+  width: 100%;
+}
+.button-group,
+.button-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.button-group > .button,
+.button-group-vertical > .button {
+  position: relative;
+  float: left;
+}
+.button-group > .button:hover,
+.button-group-vertical > .button:hover,
+.button-group > .button:focus,
+.button-group-vertical > .button:focus,
+.button-group > .button:active,
+.button-group-vertical > .button:active,
+.button-group > .button.active,
+.button-group-vertical > .button.active {
+  z-index: 2;
+}
+.button-group > .button:focus,
+.button-group-vertical > .button:focus {
+  outline: 0;
+}
+.button-group .button + .button,
+.button-group .button + .button-group,
+.button-group .button-group + .button,
+.button-group .button-group + .button-group {
+  margin-left: -1px;
+}
+.button-toolbar {
+  margin-left: -5px;
+  *zoom: 1;
+}
+.button-toolbar:before,
+.button-toolbar:after {
+  content: " ";
+  display: table;
+}
+.button-toolbar:after {
+  clear: both;
+}
+.button-toolbar:before,
+.button-toolbar:after {
+  content: " ";
+  display: table;
+}
+.button-toolbar:after {
+  clear: both;
+}
+.button-toolbar .button-group,
+.button-toolbar .input-group {
+  float: left;
+}
+.button-toolbar > .button,
+.button-toolbar > .button-group,
+.button-toolbar > .input-group {
+  margin-left: 5px;
+}
+.button-group > .button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+.button-group > .button:first-child {
+  margin-left: 0;
+}
+.button-group > .button:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.button-group > .button:last-child:not(:first-child),
+.button-group > .dropdown-toggle:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.button-group > .button-group {
+  float: left;
+}
+.button-group > .button-group:not(:first-child):not(:last-child) > .button {
+  border-radius: 0;
+}
+.button-group > .button-group:first-child > .button:last-child,
+.button-group > .button-group:first-child > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.button-group > .button-group:last-child > .button:first-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.button-group .dropdown-toggle:active,
+.button-group.open .dropdown-toggle {
+  outline: 0;
+}
+.button-group-mini > .button {
+  padding: 1px 5px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.button-group-small > .button {
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.button-group-large > .button {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.button-group > .button + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.button-group > .button-lg + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.button-group.open .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.button-group.open .dropdown-toggle.button-link {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.button-group-vertical > .button,
+.button-group-vertical > .button-group,
+.button-group-vertical > .button-group > .button {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+}
+.button-group-vertical > .button-group {
+  *zoom: 1;
+}
+.button-group-vertical > .button-group:before,
+.button-group-vertical > .button-group:after {
+  content: " ";
+  display: table;
+}
+.button-group-vertical > .button-group:after {
+  clear: both;
+}
+.button-group-vertical > .button-group:before,
+.button-group-vertical > .button-group:after {
+  content: " ";
+  display: table;
+}
+.button-group-vertical > .button-group:after {
+  clear: both;
+}
+.button-group-vertical > .button-group > .button {
+  float: none;
+}
+.button-group-vertical > .button + .button,
+.button-group-vertical > .button + .button-group,
+.button-group-vertical > .button-group + .button,
+.button-group-vertical > .button-group + .button-group {
+  margin-top: -1px;
+  margin-left: 0;
+}
+.button-group-vertical > .button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.button-group-vertical > .button:first-child:not(:last-child) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.button-group-vertical > .button:last-child:not(:first-child) {
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.button-group-vertical > .button-group:not(:first-child):not(:last-child) > .button {
+  border-radius: 0;
+}
+.button-group-vertical > .button-group:first-child:not(:last-child) > .button:last-child,
+.button-group-vertical > .button-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.button-group-vertical > .button-group:last-child:not(:first-child) > .button:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.button-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+}
+.button-group-justified > .button,
+.button-group-justified > .button-group {
+  float: none;
+  display: table-cell;
+  width: 1%;
+}
+.button-group-justified > .button-group .button {
+  width: 100%;
+}
+[data-toggle="buttons"] > .button > input[type="radio"],
+[data-toggle="buttons"] > .button > input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+/**
+  input
+*/
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  height: 20px;
+  line-height: 20px;
+  padding: 4px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  vertical-align: middle;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+input[type="text"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+input[type="text"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: #999999;
+}
+input[type="text"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: #999999;
 }

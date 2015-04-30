@@ -1,8 +1,9 @@
 /**
 	This CSS file include below style: 
 	UI布局
-	UI Button Style
+	UI Button/input/select Style
 */
+
 /**
 	***************************************************************** UI布局 
 */
@@ -150,7 +151,7 @@
 }
 
 /**
-	**********************************************************************************UI Button Style
+	**********************************************************************************UI Button/input/select Style
 */
 .button {
   display: inline-block;
@@ -568,7 +569,7 @@ select {
   height: 20px;
   line-height: 20px;
   padding: 4px 12px;
-  border: 1px solid #cccccc;
+  border: 1px solid #e6e6e6;
   border-radius: 4px;
   vertical-align: middle;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);

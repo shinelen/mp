@@ -3,13 +3,19 @@
   <head>
   	<meta charset="utf-8">
   	<link href="../css/GAPUI.css" rel="stylesheet">
-  	<link href="../css/uiPage.css" rel="stylesheet">
     <link href="../css/prettify.css" rel="stylesheet">
     <title>GAP Prototype</title>
     <script src="../js/require.js"></script>
   </head>
   <body>
-  <iframe id="headFrame" width="98%" height="98%" class="frame" name="headFrame" src="../frame/head.html"></iframe>
+  <div class="row-fluid">
+    <div class="span24">
+      <pre class="prettyprint linenums">
+      //前提引入GAPUI.css
+      <link href="../css/GAPUI.css" rel="stylesheet">
+    </pre>
+    </div>
+  </div>
     <script>
         require(['../js/jquery-1.3.2'], function() {
             require(['../js/prettify'], function() {

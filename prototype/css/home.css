@@ -36,7 +36,8 @@ body{
   	padding: 1px;
   	
 	margin: 10px 5px;
-  	min-height:500px;
+  	
+	min-height: 500px;
 }
 .help .frame{
 	height:500px;

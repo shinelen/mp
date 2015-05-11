@@ -578,6 +578,9 @@ select {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+select {
+  height:30px; 
+ }
 input[type="text"]:focus,
 input[type="password"]:focus,
 textarea:focus,
@@ -605,4 +608,141 @@ input[type="password"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
   color: #999999;
+}
+/**
+  *****************************************ICONS
+*/
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+*{
+  font-size:12px;
+}
+
+/**
+  *****************************************ICONS
+*/
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.gap-table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px
+}
+
+.gap-table>tbody>tr>td,.gap-table>tbody>tr>th,.gap-table>tfoot>tr>td,.gap-table>tfoot>tr>th,.gap-table>thead>tr>td,.gap-table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd}
+
+.gap-table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd
+}
+
+.gap-table>caption+thead>tr:first-child>td,.gap-table>caption+thead>tr:first-child>th,.gap-table>colgroup+thead>tr:first-child>td,.gap-table>colgroup+thead>tr:first-child>th,.gap-table>thead:first-child>tr:first-child>td,.gap-table>thead:first-child>tr:first-child>th {
+    border-top: 0
+}
+
+.gap-table>tbody+tbody {
+    border-top: 2px solid #ddd
+}
+
+.gap-table .gap-table {
+    background-color: #fff
+}
+
+.gap-table-condensed>tbody>tr>td,.gap-table-condensed>tbody>tr>th,.gap-table-condensed>tfoot>tr>td,.gap-table-condensed>tfoot>tr>th,.gap-table-condensed>thead>tr>td,.gap-table-condensed>thead>tr>th {
+    padding: 5px
+}
+
+.gap-table-bordered {
+    border: 1px solid #ddd
+}
+
+.gap-table-bordered>tbody>tr>td,.gap-table-bordered>tbody>tr>th,.gap-table-bordered>tfoot>tr>td,.gap-table-bordered>tfoot>tr>th,.gap-table-bordered>thead>tr>td,.gap-table-bordered>thead>tr>th {
+    border: 1px solid #ddd
+}
+
+.gap-table-bordered>thead>tr>td,.gap-table-bordered>thead>tr>th {
+    border-bottom-width: 2px
+}
+
+.gap-table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9
+}
+
+.gap-table-hover>tbody>tr:hover {
+    background-color: #f5f5f5
+}
+
+table col[class*=col-] {
+    position: static;
+    display: table-column;
+    float: none
+}
+
+table td[class*=col-],table th[class*=col-] {
+    position: static;
+    display: table-cell;
+    float: none
+}
+
+.gap-table>tbody>tr.active>td,.gap-table>tbody>tr.active>th,.gap-table>tbody>tr>td.active,.gap-table>tbody>tr>th.active,.gap-table>tfoot>tr.active>td,.gap-table>tfoot>tr.active>th,.gap-table>tfoot>tr>td.active,.gap-table>tfoot>tr>th.active,.gap-table>thead>tr.active>td,.gap-table>thead>tr.active>th,.gap-table>thead>tr>td.active,.gap-table>thead>tr>th.active {
+    background-color: #f5f5f5
+}
+
+.gap-table-hover>tbody>tr.active:hover>td,.gap-table-hover>tbody>tr.active:hover>th,.gap-table-hover>tbody>tr:hover>.active,.gap-table-hover>tbody>tr>td.active:hover,.gap-table-hover>tbody>tr>th.active:hover {
+    background-color: #e8e8e8
+}
+
+.gap-table>tbody>tr.success>td,.gap-table>tbody>tr.success>th,.gap-table>tbody>tr>td.success,.gap-table>tbody>tr>th.success,.gap-table>tfoot>tr.success>td,.gap-table>tfoot>tr.success>th,.gap-table>tfoot>tr>td.success,.gap-table>tfoot>tr>th.success,.gap-table>thead>tr.success>td,.gap-table>thead>tr.success>th,.gap-table>thead>tr>td.success,.gap-table>thead>tr>th.success {
+    background-color: #dff0d8
+}
+
+.gap-table-hover>tbody>tr.success:hover>td,.gap-table-hover>tbody>tr.success:hover>th,.gap-table-hover>tbody>tr:hover>.success,.gap-table-hover>tbody>tr>td.success:hover,.gap-table-hover>tbody>tr>th.success:hover {
+    background-color: #d0e9c6
+}
+
+.gap-table>tbody>tr.info>td,.gap-table>tbody>tr.info>th,.gap-table>tbody>tr>td.info,.gap-table>tbody>tr>th.info,.gap-table>tfoot>tr.info>td,.gap-table>tfoot>tr.info>th,.gap-table>tfoot>tr>td.info,.gap-table>tfoot>tr>th.info,.gap-table>thead>tr.info>td,.gap-table>thead>tr.info>th,.gap-table>thead>tr>td.info,.gap-table>thead>tr>th.info {
+    background-color: #d9edf7
+}
+
+.gap-table-hover>tbody>tr.info:hover>td,.gap-table-hover>tbody>tr.info:hover>th,.gap-table-hover>tbody>tr:hover>.info,.gap-table-hover>tbody>tr>td.info:hover,.gap-table-hover>tbody>tr>th.info:hover {
+    background-color: #c4e3f3
+}
+
+.gap-table>tbody>tr.warning>td,.gap-table>tbody>tr.warning>th,.gap-table>tbody>tr>td.warning,.gap-table>tbody>tr>th.warning,.gap-table>tfoot>tr.warning>td,.gap-table>tfoot>tr.warning>th,.gap-table>tfoot>tr>td.warning,.gap-table>tfoot>tr>th.warning,.gap-table>thead>tr.warning>td,.gap-table>thead>tr.warning>th,.gap-table>thead>tr>td.warning,.gap-table>thead>tr>th.warning {
+    background-color: #fcf8e3
+}
+
+.gap-table-hover>tbody>tr.warning:hover>td,.gap-table-hover>tbody>tr.warning:hover>th,.gap-table-hover>tbody>tr:hover>.warning,.gap-table-hover>tbody>tr>td.warning:hover,.gap-table-hover>tbody>tr>th.warning:hover {
+    background-color: #faf2cc
+}
+
+.gap-table>tbody>tr.danger>td,.gap-table>tbody>tr.danger>th,.gap-table>tbody>tr>td.danger,.gap-table>tbody>tr>th.danger,.gap-table>tfoot>tr.danger>td,.gap-table>tfoot>tr.danger>th,.gap-table>tfoot>tr>td.danger,.gap-table>tfoot>tr>th.danger,.gap-table>thead>tr.danger>td,.gap-table>thead>tr.danger>th,.gap-table>thead>tr>td.danger,.gap-table>thead>tr>th.danger {
+    background-color: #f2dede
+}
+
+.gap-table-hover>tbody>tr.danger:hover>td,.gap-table-hover>tbody>tr.danger:hover>th,.gap-table-hover>tbody>tr:hover>.danger,.gap-table-hover>tbody>tr>td.danger:hover,.gap-table-hover>tbody>tr>th.danger:hover {
+    background-color: #ebcccc
+}
+
+.gap-table-responsive {
+    min-height: .01%;
+    overflow-x: auto
 }
